@@ -1,0 +1,7 @@
+{
+    "algorithm": "AES256",
+    "salt": "34f0a8a67337cfd9894ebc9496ce07d6",
+    "iv": "226459505405e2592891d82696528ea0",
+    "ciphertext": "8144a409696e55dc7a90b6c5510ac7d71211d7359d5c3a58c81cee483e7a86c6dd1a3ecd99dcb6b7a5b219b922417fe6",
+    "hmac": "bac430ace80cff83fd431b4c5da7f417b3e529b494cdc6dbcbd2e343ca31e5e8"
+}
