@@ -5,12 +5,16 @@ Objective: The main aim of this assignment is to design and implement a secure f
 encryption and decryption utility using password based encryption and PBKD2 key
 derivation, supporting AES128, AES256, 3DES algorithms in CBC Mode, along with Hmac
 for integrity verification and metadata for secure decryption.
+
+
 Step 1: Environment Setup (MacOs – vscode + python)
 1. Install VS Code and python extension
 2. Create a Project file (File_Encryption_Assignment)
 3. Setup Virtual Environment (python3 -m venv venv), which keeps project files isolated
 4. In project folder create a two file (encryptor.py, and somefile.txt)
 5. Install cryptography library using terminal (pip install cryptography)
+
+
 STEP 2: Key Derivation using PBKD2
 Objective: To securely derive an encryption key from user supplied password using the
 PBKD2 method, supporting both the SHA256 and SHA512 as underlying hash algorithms.
@@ -54,6 +58,8 @@ output:
 result: Two 256-bit(32 byte) keys.
 This approach avoids key reuse between encryption and authentication operations, which
 is critical.
+
+
 STEP 3: File Encryption using CBC Mode
 objective: To securely encrpt the contents of a file using CBC mode with the option of user
 selected algorithm like AES 128, AES 256 or 3DES. Also a random IV is generated to ensure
@@ -69,7 +75,9 @@ the block size
 5. A cipher object is created using selected algorithm
 6. The padded plaintext is encrypted using CBC Mode , and the resulting cipher text is
 written into a new output file into.
-output:
+
+
+
 STEP 4: Saving the data as metadata
 Objective: To securely store the encryption details by saving them into metadata file after
 the encryption process.
@@ -83,6 +91,7 @@ Hmac: The generated HMAC value over IV and ciphertext
 Output:
 The encryption process completed successfully. All the necessary data (algorithm, salt, IV
 and HMAC ) was saved into a Json file(somefile.meta.json) for future decryption.
+
 STEP6: Loading Metadata
 Objective: load the encryption metadata saved during the encryption process. The
 metadata contains all the necessary info required for verifying data integrity.
@@ -95,10 +104,12 @@ decodes the hex encoded fields
 return these decoded values for later use.
 Output:
 The program successfully loaded all fields from the metadata file.
+
 STEP 7: Verifying HMAC
 hmac verification was successfully implemented to ensure data integrity. Only when
 the computed HMAC matched the store HMAC was decryption allowed, protecting
 against tampering or corrupted data.
+
 STEP 8: Decrypt File
 Objective: Decrypt the encrypted file back to its original plain text form, using the
 encryption key and IV only after verifying the integrity of the ciphertext using HMAC
