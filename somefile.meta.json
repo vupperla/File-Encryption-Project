@@ -1,0 +1,8 @@
+{
+    "algorithm": "3DES",
+    "salt": "6d4f896248be03c1412ffbc243715b07",
+    "iv": "7bdf6c482dd190ee",
+    "iterations": 234987,
+    "hash_algorithm": "sha256",
+    "hmac": "015cad1211e4ffff15ef14a86468d82bc2f2001af828ef2de0a0606bb3802d77"
+}
